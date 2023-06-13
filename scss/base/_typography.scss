@@ -118,6 +118,9 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: $c-marino;
+  @media (max-width: 575.98px) {
+    font-size: 1.75rem;
+  }
 }
 
 .subtitulo {
@@ -145,4 +148,150 @@
   color: $c-carbon;
   line-height: 1.25;
 }
+
+/*BLOCKS EN COLOR*/
+.tituloMarino {
+  font-family: $f-principal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $c-blanco;
+  background-color: $c-marino;
+
+  display: inline-block;
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  @media (max-width: 575.98px) {
+    font-size: 1.75rem;
+  }
+}
+.tituloVerde {
+  font-family: $f-principal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $c-carbon;
+  background-color: $c-verde;
+ 
+  display: inline-block;
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  @media (max-width: 575.98px) {
+    font-size: 1.75rem;
+  }
+}
+.tituloRosa {
+  font-family: $f-principal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $c-blanco;
+  background-color: $c-rosa;
+ 
+  display: inline-block;
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  @media (max-width: 575.98px) {
+    font-size: 1.75rem;
+  }
+}
+.tituloAzul {
+  font-family: $f-principal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $c-marino;
+  background-color: $c-azul;
   
+  display: inline-block;
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  @media (max-width: 575.98px) {
+    font-size: 1.75rem;
+  }
+}
+.tituloMorado {
+  font-family: $f-principal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $c-blanco;
+  background-color: $c-morado;
+ 
+  display: inline-block;
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  @media (max-width: 575.98px) {
+    font-size: 1.75rem;
+  }
+}
+.tituloAmarillo {
+  font-family: $f-principal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $c-carbon;
+  background-color: $c-amarillo;
+  
+  display: inline-block;
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  @media (max-width: 575.98px) {
+    font-size: 1.75rem;
+  }
+}
+.tituloGris {
+  font-family: $f-principal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $c-carbon;
+  background-color: $c-gris;
+  
+  display: inline-block;
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  @media (max-width: 575.98px) {
+    font-size: 1.75rem;
+  }
+}
+.tituloCarbon {
+  font-family: $f-principal;
+  font-weight: 700;
+  font-size: 2.25rem;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  color: $c-blanco;
+  background-color: $c-carbon;
+  
+  
+  display: inline-block;
+  padding: 8px 10px;
+  margin-bottom: 1rem;
+  @media (max-width: 575.98px) {
+    font-size: 1.75rem;
+  }
+}
