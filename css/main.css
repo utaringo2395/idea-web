@@ -79,6 +79,31 @@
   background-color: #000;
 }
 
+/*FONDOS CLAROS*/
+.bg-p-morado {
+  background-color: #F2EDFF;
+}
+
+.bg-p-rosa {
+  background-color: #FFE4F3;
+}
+
+.bg-p-azul {
+  background-color: #E4F7FF;
+}
+
+.bg-p-amarillo {
+  background-color: #FFF9DD;
+}
+
+.bg-p-verde {
+  background-color: #6AFF7F;
+}
+
+.bg-p-gris {
+  background-color: #F2F2F2;
+}
+
 @font-face {
   font-family: "Visby";
   font-style: normal;
@@ -212,7 +237,7 @@
   font-weight: 400;
   font-size: 1rem;
   color: #292929;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 .textoBold {
@@ -382,6 +407,14 @@
   .tituloCarbon {
     font-size: 1.75rem;
   }
+}
+
+li {
+  margin: 10px 0;
+}
+
+.justify {
+  text-align: justify;
 }
 
 .btnAzul {
@@ -685,7 +718,8 @@ footer .logoWrap img {
 }
 
 .innerBreadcrumb {
-  padding: 10px 12px;
+  padding: 10px 12px 10px 0;
+  margin-bottom: 20px;
 }
 .innerBreadcrumb .breadcrumb-item a {
   color: #270089;
