@@ -1,4 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+.c-marino {
+  color: #270089;
+}
+
+.c-verde {
+  color: #6AFF7F;
+}
+
+.c-rosa {
+  color: #DF1683;
+}
+
+.c-azul {
+  color: #3CB4E5;
+}
+
+.c-morado {
+  color: #6D3DE7;
+}
+
+.c-amarillo {
+  color: #FFCD00;
+}
+
+.c-gris {
+  color: #D9D9D9;
+}
+
+.c-carbon {
+  color: #292929;
+}
+
+.c-blanco {
+  color: #fff;
+}
+
+.c-negro {
+  color: #000;
+}
+
+.bg-marino {
+  background-color: #270089;
+}
+
+.bg-verde {
+  background-color: #6AFF7F;
+}
+
+.bg-rosa {
+  background-color: #DF1683;
+}
+
+.bg-azul {
+  background-color: #3CB4E5;
+}
+
+.bg-morado {
+  background-color: #6D3DE7;
+}
+
+.bg-amarillo {
+  background-color: #FFCD00;
+}
+
+.bg-gris {
+  background-color: #D9D9D9;
+}
+
+.bg-carbon {
+  background-color: #292929;
+}
+
+.bg-blanco {
+  background-color: #fff;
+}
+
+.bg-negro {
+  background-color: #000;
+}
+
 @font-face {
   font-family: "Visby";
   font-style: normal;
@@ -304,86 +384,6 @@
   }
 }
 
-.c-marino {
-  color: #270089;
-}
-
-.c-verde {
-  color: #6AFF7F;
-}
-
-.c-rosa {
-  color: #DF1683;
-}
-
-.c-azul {
-  color: #3CB4E5;
-}
-
-.c-morado {
-  color: #6D3DE7;
-}
-
-.c-amarillo {
-  color: #FFCD00;
-}
-
-.c-gris {
-  color: #D9D9D9;
-}
-
-.c-carbon {
-  color: #292929;
-}
-
-.c-blanco {
-  color: #fff;
-}
-
-.c-negro {
-  color: #000;
-}
-
-.bg-marino {
-  background-color: #270089;
-}
-
-.bg-verde {
-  background-color: #6AFF7F;
-}
-
-.bg-rosa {
-  background-color: #DF1683;
-}
-
-.bg-azul {
-  background-color: #3CB4E5;
-}
-
-.bg-morado {
-  background-color: #6D3DE7;
-}
-
-.bg-amarillo {
-  background-color: #FFCD00;
-}
-
-.bg-gris {
-  background-color: #D9D9D9;
-}
-
-.bg-carbon {
-  background-color: #292929;
-}
-
-.bg-blanco {
-  background-color: #fff;
-}
-
-.bg-negro {
-  background-color: #000;
-}
-
 .btnAzul {
   font-family: "Visby";
   font-weight: 600;
@@ -679,6 +679,50 @@ footer .logoWrap img {
 
 .swiper-pagination {
   bottom: 0;
+}
+
+.innerBreadcrumb {
+  padding: 10px 12px;
+}
+.innerBreadcrumb .breadcrumb-item a {
+  color: #270089;
+  text-transform: uppercase;
+  font-family: "Visby";
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.innerBreadcrumb .breadcrumb-item a:hover {
+  color: #6D3DE7;
+}
+.innerBreadcrumb .breadcrumb-item.active {
+  color: #3CB4E5;
+  text-transform: uppercase;
+  font-family: "Visby";
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+#contacto #map {
+  height: 390px;
+  width: 100%;
+}
+#contacto #map iframe {
+  width: 100%;
+  height: 100%;
+}
+#contacto p, #contacto a {
+  font-size: 1.125rem;
+}
+#contacto .infoWrap {
+  display: flex;
+  flex-direction: row;
+}
+#contacto .infoWrap .infoIcon {
+  margin: 3px 10px 0 0;
+  height: 1rem;
+  width: 1rem;
 }
 
 .headerBg_1 {
@@ -1411,25 +1455,86 @@ footer .logoWrap img {
   }
 }
 
-#contacto #map {
-  height: 390px;
-  width: 100%;
+#documentacion .textoDocs {
+  font-size: 18px;
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  color: #292929;
+  line-height: 1.65;
 }
-#contacto #map iframe {
-  width: 100%;
-  height: 100%;
+#documentacion .subtituloDocs {
+  font-family: "Visby";
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+  color: #292929;
+  font-style: normal;
+  text-transform: none;
 }
-#contacto p, #contacto a {
-  font-size: 1.125rem;
+#documentacion span.code {
+  background-color: rgb(230, 230, 230);
+  font-weight: 500;
+  padding: 5px 8px;
 }
-#contacto .infoWrap {
-  display: flex;
-  flex-direction: row;
+#documentacion span.css {
+  background-color: rgb(255, 222, 235);
+  font-weight: 500;
+  padding: 5px 8px;
+  color: #DF1683;
 }
-#contacto .infoWrap .infoIcon {
-  margin: 3px 10px 0 0;
-  height: 1rem;
-  width: 1rem;
+#documentacion .colorBox {
+  width: 250px;
+  height: 250px;
+  border-radius: 4px;
+}
+#documentacion .colorBoxLined {
+  width: 250px;
+  height: 250px;
+  border-radius: 4px;
+  border: 1px solid #D9D9D9;
+}
+#documentacion #notShow {
+  display: none;
+}
+#documentacion pre {
+  font-size: 18px;
+}
+@media (max-width: 575.98px) {
+  #documentacion pre {
+    font-size: 16px;
+  }
+}
+#documentacion .colorBox {
+  width: 250px;
+  height: 250px;
+  border-radius: 4px;
+}
+#documentacion .ejemploHeader {
+  width: 250px;
+  height: 250px;
+  border-radius: 4px;
+}
+
+.depList {
+  list-style: none;
+  padding-left: 0;
+}
+.depList .depItem {
+  padding: 5px 5px 5px 10px;
+  transition: 0.25s ease-out;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+.depList .depItem:hover {
+  background: #FFEBF6;
+}
+.depList .depItem .depLink {
+  font-family: "Visby";
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #000;
 }
 
 #inicio {
@@ -1494,88 +1599,6 @@ footer .logoWrap img {
   #inicio .tituloImg {
     margin-top: 30%;
   }
-}
-
-.depList {
-  list-style: none;
-  padding-left: 0;
-}
-.depList .depItem {
-  padding: 5px 5px 5px 10px;
-  transition: 0.25s ease-out;
-  border-radius: 3px;
-  margin-bottom: 5px;
-}
-.depList .depItem:hover {
-  background: #FFEBF6;
-}
-.depList .depItem .depLink {
-  font-family: "Visby";
-  font-weight: 600;
-  font-size: 24px;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  color: #000;
-}
-
-#documentacion .textoDocs {
-  font-size: 18px;
-  font-family: "Nunito Sans";
-  font-weight: 400;
-  color: #292929;
-  line-height: 1.65;
-}
-#documentacion .subtituloDocs {
-  font-family: "Visby";
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: 0.03em;
-  color: #292929;
-  font-style: normal;
-  text-transform: none;
-}
-#documentacion span.code {
-  background-color: rgb(230, 230, 230);
-  font-weight: 500;
-  padding: 5px 8px;
-}
-#documentacion span.css {
-  background-color: rgb(255, 222, 235);
-  font-weight: 500;
-  padding: 5px 8px;
-  color: #DF1683;
-}
-#documentacion .colorBox {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
-}
-#documentacion .colorBoxLined {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
-  border: 1px solid #D9D9D9;
-}
-#documentacion #notShow {
-  display: none;
-}
-#documentacion pre {
-  font-size: 18px;
-}
-@media (max-width: 575.98px) {
-  #documentacion pre {
-    font-size: 16px;
-  }
-}
-#documentacion .colorBox {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
-}
-#documentacion .ejemploHeader {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
 }
 
 /*# sourceMappingURL=main.css.map */
