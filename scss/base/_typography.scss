@@ -138,7 +138,7 @@
   font-weight: 400;
   font-size: 1rem;
   color: $c-carbon;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 
 .textoBold {
@@ -294,4 +294,12 @@
   @media (max-width: 575.98px) {
     font-size: 1.75rem;
   }
+}
+
+li {
+  margin: 10px 0;
+}
+
+.justify {
+  text-align: justify;
 }
