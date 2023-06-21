@@ -1574,6 +1574,21 @@ footer .logoWrap img {
   color: #000;
 }
 
+.nav-pills.navEventos li.nav-item {
+  width: 50%;
+}
+.nav-pills.navEventos li.nav-item button.nav-link {
+  width: 100%;
+  text-align: center;
+  border-radius: 0;
+  color: #D9D9D9;
+}
+.nav-pills.navEventos li.nav-item button.nav-link.active {
+  background: #fff;
+  border-bottom: 2px solid #270089;
+  color: #270089;
+}
+
 #inicio {
   position: relative;
   height: 100vh;
