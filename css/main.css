@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 .c-marino {
   color: #270089;
@@ -622,6 +623,70 @@ li {
   padding: 5px;
 }
 
+.eventoCard {
+  background: #fff;
+  padding: 15px;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.eventoCard .imgWrap {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.eventoCard .imgWrap .fecha {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: #6AFF7F;
+  color: #000;
+  font-family: "Visby";
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 10px;
+}
+.eventoCard .imgWrap .fecha.fechaAnt {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: #292929;
+  color: #fff;
+  font-family: "Visby";
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 10px;
+}
+.eventoCard .eventoInfo p.subtitulo, .eventoCard .eventoInfo p.texto.ubicación {
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+.eventoCard:hover {
+  box-shadow: 0 0 10px 0 rgba(4, 41, 64, 0.15);
+  border-radius: 5px;
+  transform: translateY(-7px);
+}
+
+.eventoCard.anterior {
+  opacity: 0.7;
+}
+.eventoCard.anterior:hover {
+  opacity: 1;
+}
+
 .bRightDivider {
   position: absolute;
   bottom: -0.5px;
@@ -786,7 +851,7 @@ footer .logoWrap img {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-image: url("/src/assets/img/bgFiguras2.png");
+  background-image: url("/img/bgFiguras2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -797,8 +862,8 @@ footer .logoWrap img {
   left: 0;
   background-color: #DF1683;
   display: flex;
-  justify-content: flex-start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -830,14 +895,15 @@ footer .logoWrap img {
   width: 100%;
 }
 .headerBg_1 .tituloHeader {
-  font-family: "Visby CF";
+  font-family: "Visby";
   font-style: italic;
   font-weight: 800;
   font-size: 6.25rem;
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.15);
+  word-break: break-all;
+  color: rgba(255, 255, 255, 0.35);
   -webkit-text-stroke: 2px #fff;
   margin-bottom: 18%;
   padding-top: 20px;
@@ -862,6 +928,16 @@ footer .logoWrap img {
   justify-content: flex-start;
   align-items: flex-end;
 }
+@media (max-width: 991.98px) {
+  .headerBg_2 {
+    height: 450px;
+  }
+}
+@media (max-width: 575.98px) {
+  .headerBg_2 {
+    height: 370px;
+  }
+}
 .headerBg_2 .bgGrafico {
   position: absolute;
   top: 0;
@@ -869,7 +945,7 @@ footer .logoWrap img {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-image: url("/src/assets/img/bgFiguras2.png");
+  background-image: url("/img/bgFiguras2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -880,8 +956,8 @@ footer .logoWrap img {
   left: 0;
   background-color: #3CB4E5;
   display: flex;
-  justify-content: flex-start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -913,14 +989,15 @@ footer .logoWrap img {
   width: 100%;
 }
 .headerBg_2 .tituloHeader {
-  font-family: "Visby CF";
+  font-family: "Visby";
   font-style: italic;
   font-weight: 800;
   font-size: 6.25rem;
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.15);
+  word-break: break-all;
+  color: rgba(255, 255, 255, 0.35);
   -webkit-text-stroke: 2px #fff;
   margin-bottom: 18%;
   padding-top: 20px;
@@ -945,6 +1022,16 @@ footer .logoWrap img {
   justify-content: flex-start;
   align-items: flex-end;
 }
+@media (max-width: 991.98px) {
+  .headerBg_3 {
+    height: 450px;
+  }
+}
+@media (max-width: 575.98px) {
+  .headerBg_3 {
+    height: 370px;
+  }
+}
 .headerBg_3 .bgGrafico {
   position: absolute;
   top: 0;
@@ -952,7 +1039,7 @@ footer .logoWrap img {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-image: url("/src/assets/img/bgFiguras2.png");
+  background-image: url("/img/bgFiguras2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -963,8 +1050,8 @@ footer .logoWrap img {
   left: 0;
   background-color: #6D3DE7;
   display: flex;
-  justify-content: flex-start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -996,14 +1083,15 @@ footer .logoWrap img {
   width: 100%;
 }
 .headerBg_3 .tituloHeader {
-  font-family: "Visby CF";
+  font-family: "Visby";
   font-style: italic;
   font-weight: 800;
   font-size: 6.25rem;
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.15);
+  word-break: break-all;
+  color: rgba(255, 255, 255, 0.35);
   -webkit-text-stroke: 2px #fff;
   margin-bottom: 18%;
   padding-top: 20px;
@@ -1028,6 +1116,16 @@ footer .logoWrap img {
   justify-content: flex-start;
   align-items: flex-end;
 }
+@media (max-width: 991.98px) {
+  .headerBg_4 {
+    height: 450px;
+  }
+}
+@media (max-width: 575.98px) {
+  .headerBg_4 {
+    height: 370px;
+  }
+}
 .headerBg_4 .bgGrafico {
   position: absolute;
   top: 0;
@@ -1035,7 +1133,7 @@ footer .logoWrap img {
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-image: url("/src/assets/img/bgFiguras2.png");
+  background-image: url("/img/bgFiguras2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1046,8 +1144,8 @@ footer .logoWrap img {
   left: 0;
   background-color: #17d38b;
   display: flex;
-  justify-content: flex-start;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -1079,14 +1177,15 @@ footer .logoWrap img {
   width: 100%;
 }
 .headerBg_4 .tituloHeader {
-  font-family: "Visby CF";
+  font-family: "Visby";
   font-style: italic;
   font-weight: 800;
   font-size: 6.25rem;
   line-height: 1;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.15);
+  word-break: break-all;
+  color: rgba(255, 255, 255, 0.35);
   -webkit-text-stroke: 2px #fff;
   margin-bottom: 18%;
   padding-top: 20px;
@@ -1098,6 +1197,194 @@ footer .logoWrap img {
 }
 @media (max-width: 575.98px) {
   .headerBg_4 .tituloHeader {
+    font-size: 3.15rem;
+    -webkit-text-stroke: 1px #fff;
+    margin-bottom: 20%;
+  }
+}
+
+.headerBg_5 {
+  position: relative;
+  height: 570px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+@media (max-width: 991.98px) {
+  .headerBg_5 {
+    height: 450px;
+  }
+}
+@media (max-width: 575.98px) {
+  .headerBg_5 {
+    height: 370px;
+  }
+}
+.headerBg_5 .bgGrafico {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: url("/img/bgFiguras2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.headerBg_5 .imgWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ffb83d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+.headerBg_5 .imgWrapper::before {
+  background-color: #27184f;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  mix-blend-mode: lighten;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.headerBg_5 .imgWrapper img {
+  filter: grayscale(100%) contrast(1) blur(0px);
+  flex: 1 0 100%;
+  height: 100%;
+  max-width: 100%;
+  mix-blend-mode: multiply;
+  object-fit: cover;
+  object-position: 85% 50%;
+  opacity: 1;
+  position: relative;
+  width: 100%;
+}
+.headerBg_5 .tituloHeader {
+  font-family: "Visby";
+  font-style: italic;
+  font-weight: 800;
+  font-size: 6.25rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  word-break: break-all;
+  color: rgba(255, 255, 255, 0.35);
+  -webkit-text-stroke: 2px #fff;
+  margin-bottom: 18%;
+  padding-top: 20px;
+}
+@media (max-width: 1199.98px) {
+  .headerBg_5 .tituloHeader {
+    font-size: 5.5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .headerBg_5 .tituloHeader {
+    font-size: 3.15rem;
+    -webkit-text-stroke: 1px #fff;
+    margin-bottom: 20%;
+  }
+}
+
+.headerBg_6 {
+  position: relative;
+  height: 570px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+@media (max-width: 991.98px) {
+  .headerBg_6 {
+    height: 450px;
+  }
+}
+@media (max-width: 575.98px) {
+  .headerBg_6 {
+    height: 370px;
+  }
+}
+.headerBg_6 .bgGrafico {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-image: url("/img/bgFiguras2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.headerBg_6 .imgWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f5648c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -10;
+}
+.headerBg_6 .imgWrapper::before {
+  background-color: #27184f;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  mix-blend-mode: lighten;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.headerBg_6 .imgWrapper img {
+  filter: grayscale(100%) contrast(1) blur(0px);
+  flex: 1 0 100%;
+  height: 100%;
+  max-width: 100%;
+  mix-blend-mode: multiply;
+  object-fit: cover;
+  object-position: 85% 50%;
+  opacity: 1;
+  position: relative;
+  width: 100%;
+}
+.headerBg_6 .tituloHeader {
+  font-family: "Visby";
+  font-style: italic;
+  font-weight: 800;
+  font-size: 6.25rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  word-break: break-all;
+  color: rgba(255, 255, 255, 0.35);
+  -webkit-text-stroke: 2px #fff;
+  margin-bottom: 18%;
+  padding-top: 20px;
+}
+@media (max-width: 1199.98px) {
+  .headerBg_6 .tituloHeader {
+    font-size: 5.5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .headerBg_6 .tituloHeader {
     font-size: 3.15rem;
     -webkit-text-stroke: 1px #fff;
     margin-bottom: 20%;
@@ -1329,6 +1616,9 @@ footer .logoWrap img {
   height: 250px;
   border-radius: 4px;
 }
+#documentacion .claseprueba {
+  width: 100%;
+}
 
 .depList {
   list-style: none;
@@ -1429,83 +1719,6 @@ footer .logoWrap img {
   #inicio .tituloImg {
     margin-top: 30%;
   }
-}
-
-.depList {
-  list-style: none;
-  padding-left: 0;
-}
-.depList .depItem {
-  padding: 5px 5px 5px 10px;
-  transition: 0.25s ease-out;
-  border-radius: 3px;
-  margin-bottom: 5px;
-}
-.depList .depItem:hover {
-  background: #FFEBF6;
-}
-.depList .depItem .depLink {
-  font-family: "Visby";
-  font-weight: 600;
-  font-size: 24px;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  color: #000;
-}
-
-#documentacion .textoDocs {
-  font-size: 18px;
-  font-family: "Nunito Sans";
-  font-weight: 400;
-  color: #292929;
-  line-height: 1.65;
-}
-#documentacion .subtituloDocs {
-  font-family: "Visby";
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: 0.03em;
-  color: #292929;
-  font-style: normal;
-  text-transform: none;
-}
-#documentacion span.code {
-  background-color: rgb(230, 230, 230);
-  font-weight: 500;
-  padding: 5px 8px;
-}
-#documentacion span.css {
-  background-color: rgb(255, 222, 235);
-  font-weight: 500;
-  padding: 5px 8px;
-  color: #DF1683;
-}
-#documentacion .colorBox {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
-}
-#documentacion .colorBoxLined {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
-  border: 1px solid #D9D9D9;
-}
-#documentacion #notShow {
-  display: none;
-}
-#documentacion .colorBox {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
-}
-#documentacion .ejemploHeader {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
-}
-#documentacion .claseprueba {
-  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
