@@ -1655,6 +1655,11 @@ footer .logoWrap img {
   border-radius: 0;
   color: #D9D9D9;
 }
+@media (max-width: 575.98px) {
+  .nav-pills.navEventos li.nav-item button.nav-link {
+    font-size: 1.05rem;
+  }
+}
 .nav-pills.navEventos li.nav-item button.nav-link.active {
   background: #fff;
   border-bottom: 2px solid #270089;

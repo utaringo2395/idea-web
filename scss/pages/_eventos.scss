@@ -7,7 +7,9 @@
             text-align: center;
             border-radius: 0;
             color: $c-gris;
-            
+            @media (max-width: 575.98px) {
+                font-size: 1.05rem;
+            }
         }
         button.nav-link.active {
             background: $c-blanco;
