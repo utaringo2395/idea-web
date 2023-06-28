@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 .c-marino {
   color: #270089;
@@ -620,6 +621,70 @@ li {
   color: #6D3DE7;
   display: inline;
   padding: 5px;
+}
+
+.eventoCard {
+  background: #fff;
+  padding: 15px;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.eventoCard .imgWrap {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.eventoCard .imgWrap .fecha {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: #6AFF7F;
+  color: #000;
+  font-family: "Visby";
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 10px;
+}
+.eventoCard .imgWrap .fecha.fechaAnt {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: #292929;
+  color: #fff;
+  font-family: "Visby";
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 10px;
+}
+.eventoCard .eventoInfo p.subtitulo, .eventoCard .eventoInfo p.texto.ubicación {
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+.eventoCard:hover {
+  box-shadow: 0 0 10px 0 rgba(4, 41, 64, 0.15);
+  border-radius: 5px;
+  transform: translateY(-7px);
+}
+
+.eventoCard.anterior {
+  opacity: 0.7;
+}
+.eventoCard.anterior:hover {
+  opacity: 1;
 }
 
 .bRightDivider {
