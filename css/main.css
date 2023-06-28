@@ -548,16 +548,16 @@ li {
   margin-top: 2rem;
   text-align: end;
 }
-.blogImagen .cardBody .cardFooter .openLink {
+.blogImagen .cardBody .cardFooter .btn.openLink {
   font-family: "Visby";
   font-weight: 600;
   font-size: 1.15rem;
   color: #6D3DE7;
   display: inline;
   padding: 5px;
-  transition: all 0.18s fade;
+  transition: all 0.18s;
 }
-.blogImagen .cardBody .cardFooter .openLink:hover {
+.blogImagen .cardBody .cardFooter .btn.openLink:hover {
   background: #F2EDFF;
 }
 
@@ -618,13 +618,17 @@ li {
   margin-top: 2rem;
   text-align: end;
 }
-.blogCard .cardBody .cardFooter a.openLink {
+.blogCard .cardBody .cardFooter .btn.openLink {
   font-family: "Visby";
   font-weight: 600;
   font-size: 1.15rem;
   color: #6D3DE7;
   display: inline;
   padding: 5px;
+  transition: all 0.18s;
+}
+.blogCard .cardBody .cardFooter .btn.openLink:hover {
+  background: #F2EDFF;
 }
 
 .eventoCard {

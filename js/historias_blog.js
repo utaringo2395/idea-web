@@ -19,8 +19,9 @@ function consultas() {
         
         </div>
         
-          <div class="card-body">
+          <div class="cardBody">
             <h5 class="subtitulo">${element.titulos}</h5>
+            <span class="fecha">${element.fechas}</span>
             <p class="text">
             ${element.cuerpos.slice(0, 150)}...
             </p>
