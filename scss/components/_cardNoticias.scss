@@ -74,13 +74,18 @@
        .cardFooter {
         margin-top: 2rem;
         text-align: end;
-            a.openLink {
+            .openLink {
                 font-family: $f-principal;
                 font-weight: 600;
                 font-size: 1.15rem;
                 color: $c-morado;
                 display: inline;
                 padding: 5px;
+                transition: all 0.18s fade;
+
+                &:hover {
+                    background: $c-pmorado;
+                }
             }
        }
     }
