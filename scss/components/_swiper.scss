@@ -13,4 +13,6 @@
 .swiper-pagination {
     bottom: 0;
 }
-
+.swiper-pagination-bullet-active {
+    background-color: $c-amarillo !important;
+}
