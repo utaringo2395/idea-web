@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IDEA - Instituto del Deporte del Estado de Aguascalientes</title>
+    <title> Blog IDEA - Instituto del Deporte del Estado de Aguascalientes</title>
+    <link rel="icon" href="/img/logoColor.png" type="image/png" >
 
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
@@ -12,6 +13,9 @@
     <!--Script App-->
     <script src="/js/boletines_blog.js"></script>
     <script src="/js/historias_blog.js"></script>
+    <script src="/js/experiencia_blog.js"></script>
+
+
 
 
     <link
@@ -126,100 +130,56 @@ referrerpolicy="no-referrer"
     </div>
     <div class="container">
         <!--Contenido-->
-        <div id="divBoletines" class="row"></div>
+        <div id="divBoletin" class="row"></div>
         
         <!--Contenido-->
       </div>
       <!--Modal-->
-      <div id="divModal"></div>
+      <div id="divModalBol"></div>
 </div>
 
 <!--EXPERIENCIA JSON-->
-        <div class="container mExtra">
-            <div class="row">
-                <div class="col-lg-12">
-                    <span class="tituloGris">Experiencias de los gigantes</span>
+<div class="container mExtra">
+    <div class="row">
+        <div class="col-lg-12">
+            <span class="tituloGris">Experiencia de los gigantes</span>
+        </div>
+    </div>
+    <div class="container">
+        <!--Contenido-->
+        <div id="divExperiencia" class="row"></div>
+        
+        <!--Contenido-->
+      </div>
+      <!--Modal-->
+      <div id="divModalEx"></div>
+</div>
+<div class="container mExtra">
+    <div class="row">
+        <div class="col-lg-12">
+
+            
+                    <span class="tituloMarino">TRIVIA DE LA SEMANA</span>
+                    <br><br>
+            <div class="card text-center">
+                <div class="card-header">
+                    <p class="subtitulo">DEMUESTRA LO QUE SABES</p>
+
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="blogImagen">
-                        <div class="imgCont" style="background-image: url(/img/default.png);">
-                            <div class="etiqueta bg-rosa c-blanco">Etiqueta</div>
-                        </div>
-                        <div class="cardBody">
-                            <p class="subtitulo">Título de artículo</p>
-                            <span class="fecha">dd/mm/aa</span>
-                            <p class="text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="cardFooter">
-                                <a href="#exampleModal" class="openLink" data-bs-toggle="modal" role="button">Seguir leyendo &#8594;</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="blogCard">
-                        <div class="cardBody">
-                            <div class="text-end mb-2">
-                                <span class="etiqueta bg-verde c-carbon">Etiqueta</span>
-                            </div>
-                            <p class="subtitulo">Título de artículo</p>
-                            <span class="fecha">dd/mm/aa</span>
-                            <p class="text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="cardFooter">
-                                <a href="#exampleModal" class="openLink" data-bs-toggle="modal" role="button">Seguir leyendo &#8594;</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="blogImagen">
-                        <div class="imgCont" style="background-image: url(/img/default.png);">
-                            <div class="etiqueta bg-amarillo c-blanco">Etiqueta</div>
-                        </div>
-                        <div class="cardBody">
-                            <p class="subtitulo">Título de artículo</p>
-                            <span class="fecha">dd/mm/aa</span>
-                            <p class="text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="cardFooter">
-                                <a href="#exampleModal" class="openLink" data-bs-toggle="modal" role="button">Seguir leyendo &#8594;</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <div class="blogCard">
-                        <div class="cardBody">
-                            <div class="text-end mb-2">
-                                <span class="etiqueta bg-azul c-blanco">Etiqueta</span>
-                            </div>
-                            <p class="subtitulo">Título de artículo</p>
-                            <span class="fecha">dd/mm/aa</span>
-                            <p class="text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="cardFooter">
-                                <a href="#exampleModal" class="openLink" data-bs-toggle="modal" role="button">Seguir leyendo &#8594;</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <div class="blogCard">
-                        <div class="cardBody">
-                            <div class="text-end mb-2">
-                                <span class="etiqueta bg-carbon c-blanco">Etiqueta</span>
-                            </div>
-                            <p class="subtitulo">Título de artículo</p>
-                            <span class="fecha">dd/mm/aa</span>
-                            <p class="text">Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <div class="cardFooter">
-                                <a href="#exampleModal" class="openLink" data-bs-toggle="modal" role="button">Seguir leyendo &#8594;</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-body">
+                    <h5 class="card-title">                            
+                        <h1 class="titulo">TRIVIA DE GIGANTES</h1>
+                    </h5>
+
+                  <p class="text">Ingresa para jugar a la trivia de la semana y tengas la posibilidad de ganar un premio.</p>
+                  <a href="/secciones/trivia.html" class="btnAzul">Empezar a jugar</a>
                 </div>
                 
-            </div>
+              </div>
+              
         </div>
+    </div>
+</div>
     </main>
 
     <footer>

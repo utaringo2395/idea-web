@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trivia IDEA - Instituto del Deporte del Estado de Aguascalientes</title>
+    <meta charset="utf-8">
+    <link href="/css/quizzer.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="/img/logoColor.png" type="image/png">
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"/>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="/js/jquery-2.2.0.min.js"></script>
+    <script src="/js/underscore-1.8.3.min.js"></script>
+    <script src="/js/quizzer.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbarRuta navbar-expand-lg fixed-top" ref="headRef">
+        <!--menu-->
+        <div class="container">
+            <a class="navbar-brand" href="/index.html" ref="headRef">
+                <!-- <img src="/img/logoBlanco.svg" alt="logotipo IDEA" /> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item my-auto">
+                        <a class="nav-link active" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="/secciones/deportes.html">Deportes</a>
+                    </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="/secciones/adaptados.html">Deportes Adaptados</a>
+                    </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="">Galería</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Eventos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="my-2">
+                                <a class="dropdown-item" href="/secciones/eventos/nacionales.html">Nacionales</a>
+                            </li>
+                            <li class="my-2">
+                                <a class="dropdown-item" href="/secciones/eventos/internacionales.html">Internacionales</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="headerBg_2">
+        <div class="imgWrapper">
+            <img src="/img/bgs/blog.png" alt="">
+          </div>
+          <div class="bgGrafico"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                 <h1 class="tituloHeader">Trivia</h1>
+              </div>
+            </div>
+          </div>
+          <img src="/img/divider/bottomRight.svg" alt="" class="bRightDivider" />
+
+      
+    </header>
+    
+    <div class="start">
+      <div class="card">
+        
+        <div class="row">
+        <div class="col-lg-12">
+        <span class="tituloGris" >¿Listo para comenzar?</span>
+        
+        </div> 
+        </div>
+        <button class="start"><font color="#fff" class="btnAzul">Comenzar</font></button>
+      
+    </div>
+    </div>
+    <div class="play">
+        
+      <div class="questions">
+
+      </div>
+    </div>
+
+    <div class="finish card">
+      <p class="times_up">¡Se acabó el tiempo!</p>
+      <p class="subtitulo">!NO OLVIDES TOMAR CAPTURA DE TUS RESULTADOS¡</p>
+      <h2>Has obtenido</h2>
+      <p class="final_points">8 puntos</p>
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="ggforms">
+        <button class="btnGris"><a href="https://forms.gle/M8atHqRo7dfasuRJ7"style="text-decoration: none">Ingresa tus datos</a></button>
+      </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+
+      <div class="play_again">
+        <button class="btnAzul">Volver a jugar</button>
+      </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+
+      <div class="volver_blog">
+        <button class="btnGris"><a href="/secciones/blog.html" style="text-decoration: none">Volver al blog</a></button>
+      </div>
+        </div>
+    </div>
+      
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="countdown" style="text-align: center;"><span class="time_left">12s</span></div>
+            <div class="points" style="text-align: center;"><span class="points">0 points</span></div>        
+        </div> 
+        </div>
+      
+ 
+    
+
+    <footer>
+        <div class="logoWrap">
+            <img src="/img/logoFooter.svg" alt="" class="img-fluid" />
+        </div>
+        <p class="texto text-center" style="color: #78797F;">Copyright © 2023 IDEA, Gobierno del Estado de Aguascalientes 2022 - 2027</p>
+    </footer>
+
+    <!--MODAL-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="titulo fs-5" id="exampleModalLabel">Título de artículo</h1>
+                    <span class="fecha">dd/mm/aa</span>
+                    <div class="imgCont">
+                        <img src="/img/default.png" alt="" />
+                    </div>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Maecenas accumsan lacus vel facilisis volutpat est. Aliquet bibendum enim facilisis gravida neque. Id aliquet lectus proin nibh nisl condimentum. Dolor sed viverra ipsum nunc. Diam in arcu cursus euismod quis viverra nibh cras. Ac orci phasellus egestas tellus. Sit amet mattis vulputate enim nulla aliquet porttitor. Ullamcorper malesuada proin libero nunc consequat interdum. Et malesuada fames ac turpis egestas sed tempus urna et. At imperdiet dui accumsan sit amet nulla facilisi. Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus.</p>
+
+                    <p class="text">Facilisis leo vel fringilla est ullamcorper eget nulla facilisi. Tortor pretium viverra suspendisse potenti nullam ac tortor. Quis viverra nibh cras pulvinar mattis. Et malesuada fames ac turpis egestas. Enim ut sem viverra aliquet eget sit amet tellus cras. Id consectetur purus ut faucibus pulvinar elementum integer. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. Dui faucibus in ornare quam viverra orci sagittis eu. Vitae justo eget magna fermentum iaculis eu non diam phasellus. Pulvinar elementum integer enim neque. Id diam maecenas ultricies mi eget mauris pharetra et ultrices. Semper quis lectus nulla at volutpat. Morbi tristique senectus et netus et malesuada fames ac turpis. Nunc sed id semper risus in hendrerit. Faucibus turpis in eu mi bibendum neque egestas congue quisque. Ultrices gravida dictum fusce ut placerat. Gravida in fermentum et sollicitudin ac orci.</p>
+
+                    <p class="text">Augue lacus viverra vitae congue eu consequat ac felis donec. Est velit egestas dui id ornare arcu odio ut sem. Eget mauris pharetra et ultrices. Diam quam nulla porttitor massa. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. In nisl nisi scelerisque eu ultrices vitae auctor eu augue. Tortor pretium viverra suspendisse potenti nullam. Pharetra pharetra massa massa ultricies mi quis hendrerit. Aliquet risus feugiat in ante metus dictum. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Massa tincidunt nunc pulvinar sapien. Diam vulputate ut pharetra sit amet aliquam id diam maecenas. Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis. Ut venenatis tellus in metus vulputate. Non curabitur gravida arcu ac tortor dignissim convallis aenean. Cursus vitae congue mauris rhoncus aenean. Ipsum nunc aliquet bibendum enim facilisis. Adipiscing bibendum est ultricies integer. Turpis massa sed elementum tempus egestas sed sed risus. Malesuada bibendum arcu vitae elementum curabitur vitae.</p>
+                </div>
+
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+   
+
+
+</body>
+</html>

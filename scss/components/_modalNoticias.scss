@@ -35,4 +35,15 @@
     .text {
         text-align: justify;
     }
+    .fecha {
+        background: $c-gris;
+        color: $c-carbon;
+        font-family: $f-texto;
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 3px;
+    }
 }
