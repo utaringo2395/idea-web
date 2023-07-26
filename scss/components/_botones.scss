@@ -9,10 +9,12 @@
     text-decoration: none;
     border-radius: 5px;
     display: inline-block;
+    border: 1px solid $c-marino;
 
     &:hover {
         background: $c-morado;
         color: $c-blanco;
         transition: 0.25s ease-out;
+        border: 1px solid $c-morado;
     }
 }
