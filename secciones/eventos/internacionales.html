@@ -97,16 +97,13 @@
                 <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pill-proximos" role="tabpanel" aria-labelledby="pill-proximos-tab" tabindex="0">
                         <div class="row">
-
-                        <div id="divBotones" class="row"></div>
+                            <div id="divBotones" class="row"></div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pill-anteriores" role="tabpanel" aria-labelledby="pill-anteriores-tab" tabindex="0">
                         <div class="row">
-
                             <div id="divBotonesPas" class="row"></div>
-                          </div>
-                          
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,89 +127,72 @@
           IdCategoria:35 -> Deporte Internacional
         */
         async function consulta() {
-    document.getElementById("divBotones").innerHTML = "";
-    document.getElementById("divBotonesPas").innerHTML = "";
+            document.getElementById("divBotones").innerHTML = "";
+            document.getElementById("divBotonesPas").innerHTML = "";
 
-    let fecha_Momento = moment(Date.now()).utc().format("YYYY-MM-DD hh:mm:ss");
-    const response = await axios.get("https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/idea");
+            let fecha_Momento = moment(Date.now()).utc().format("YYYY-MM-DD hh:mm:ss");
+            const response = await axios.get("https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/idea");
 
-    const eventosPasados = [];
-    const eventosProximos = [];
+            const eventosPasados = [];
+            const eventosProximos = [];
 
-    response.data.forEach((element) => {
-        /* Recorremos lista */
-        if (element.idCategoria === 35) {
-            let fin = moment(element.horaios[element.horaios.length - 1].fechaFin).utc().format("YYYY-MM-DD hh:mm:ss");
-            if (fecha_Momento >= fin) {
-                eventosPasados.push(element); // Almacenar el evento pasado en el arreglo eventosPasados
-            } else {
-                eventosProximos.push(element); // Almacenar el evento próximo en el arreglo eventosProximos
-            }
+            response.data.forEach((element) => {
+                /* Recorremos lista */
+                if (element.idCategoria === 35) {
+                    let fin = moment(element.horaios[element.horaios.length - 1].fechaFin).utc().format("YYYY-MM-DD hh:mm:ss");
+                    if (fecha_Momento >= fin) {
+                        eventosPasados.push(element); // Almacenar el evento pasado en el arreglo eventosPasados
+                    } else {
+                        eventosProximos.push(element); // Almacenar el evento próximo en el arreglo eventosProximos
+                    }
+                }
+            });
+
+            const maxEventosPasadosMostrados = 6;
+            const ultimosEventosPasados = eventosPasados.slice(-maxEventosPasadosMostrados); // Obtener los últimos 5 eventos pasados
+
+            // Mostrar los últimos 5 eventos pasados
+            ultimosEventosPasados.forEach((element) => {
+            const fechaInicio = moment(element.horaios[0].fechaInicio).format("MM/DD/YYYY"); // Obtener la fecha de inicio formateada
+
+                document.getElementById("divBotonesPas").innerHTML += `
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <button type="button" class="eventoCard anterior" onclick="window.open('https://eservicios2.aguascalientes.gob.mx/eventosPortal/evento/${element.id}', '_blank');">
+                            <div class="imgWrap" style="background-image: url('https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/image/${element.id}')">
+                                <div class="fecha fechaAnt">${fechaInicio}</div> <!-- Agregar la fecha de inicio aquí -->                   
+                            </div>
+                            <div class="eventoInfo">
+                                <p class="subtitulo c_marino">${element.nombre.slice(0, 70)}...</p>
+                                <p class="texto ubicacion mb-2">${element.descripcion.slice(0, 150)}...</p>
+                            </div>
+                        </button>
+                    </div>
+                `;
+                console.log("Internacional - Pasado", element);
+            });
+
+            // Mostrar eventos próximos
+            eventosProximos.forEach((element) => {
+            const fechaInicio = moment(element.horaios[0].fechaInicio).format("MM/DD/YYYY"); // Obtener la fecha de inicio formateada
+
+                document.getElementById("divBotones").innerHTML += `
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <button type="button" class="eventoCard" onclick="window.open('https://eservicios2.aguascalientes.gob.mx/eventosPortal/evento/${element.id}', '_blank');">
+                            <div class="imgWrap" style="background-image: url('https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/image/${element.id}')">
+                                <div class="fecha">Fecha de inicio: ${fechaInicio}</div> <!-- Agregar la fecha de inicio aquí -->
+                            </div>
+                            <div class="eventoInfo">
+                                <p class="subtitulo c_marino">${element.nombre.slice(0, 70)}...</p>
+                                <p class="texto ubicacion mb-2">${element.descripcion.slice(0, 150)}...</p>
+                            </div>
+                        </button>
+                    </div>
+                `;
+                console.log("Internacional - Proximo", element);
+            });
         }
-    });
 
-    const maxEventosPasadosMostrados = 6;
-    const ultimosEventosPasados = eventosPasados.slice(-maxEventosPasadosMostrados); // Obtener los últimos 5 eventos pasados
-
-    // Mostrar los últimos 5 eventos pasados
-    ultimosEventosPasados.forEach((element) => {
-      const fechaInicio = moment(element.horaios[0].fechaInicio).format("MM/DD/YYYY"); // Obtener la fecha de inicio formateada
-
-        document.getElementById("divBotonesPas").innerHTML += `
-<div class="col-lg-4 col-md-6 mb-4">
-    <a class="eventoCard anterior">
-        <div class="imgWrap">
-            <img src="https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/image/${element.id}" height="100%" width="100%">
-        </div>
-        <div class="eventoInfo">
-            <p class="subtitulo c_marino">${element.nombre.slice(0, 70)}...</p>
-            <p class="texto ubicacion mb-2">${element.descripcion.slice(0, 150)}...</p>
-            <span class="horario">Fecha de inicio: ${fechaInicio}</span> <!-- Agregar la fecha de inicio aquí -->
-        </div>
-        <button type="button" class="btnAzul" onclick="window.open('https://eservicios2.aguascalientes.gob.mx/eventosPortal/evento/${element.id}', '_blank');">Ver más</button>
-    </a>
-</div>
-
-`;
-        console.log("Internacional - Pasado", element);
-    });
-
-    // Mostrar eventos próximos
-    eventosProximos.forEach((element) => {
-      const fechaInicio = moment(element.horaios[0].fechaInicio).format("MM/DD/YYYY"); // Obtener la fecha de inicio formateada
-
-        document.getElementById("divBotones").innerHTML += `
-<div class="col-lg-4 col-md-6 mb-4">
-    <a class="eventoCard">
-        <div class="imgWrap">
-            <img src="https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/image/${element.id}" height="100%" width="100%">
-        </div>
-        <div class="eventoInfo">
-            <p class="subtitulo c_marino">${element.nombre.slice(0, 70)}...</p>
-            <p class="texto ubicacion mb-2">${element.descripcion.slice(0, 150)}...</p>
-            <span class="horario">Fecha de inicio: ${fechaInicio}</span> <!-- Agregar la fecha de inicio aquí -->
-        </div>
-        <button type="button" class="btnAzul" onclick="window.open('https://eservicios2.aguascalientes.gob.mx/eventosPortal/evento/${element.id}', '_blank');">Ver más</button>
-    </a>
-</div>
-                                <div class="col-lg-4 col-md-6 mb-4">
-                                    <a class="eventoCard" href="#">
-                                        <div class="imgWrap" style="background-image: url(/img/default.png);">
-                                            <div class="fecha">dd/mm/aa</div>
-                                        </div>
-                                        <div class="eventoInfo">
-                                            <p class="subtitulo c_marino">Título del Evento</p>
-                                            <p class="texto ubicacion mb-2">Ubicación del evento</p>
-                                            <span class="horario">00:00hrs</span>
-                                        </div>
-                                    </a>
-                                </div>
-`;
-        console.log("Internacional - Proximo", element);
-    });
-}
-
-consulta();
+        consulta();
 
 
       </script>

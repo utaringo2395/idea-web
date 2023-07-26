@@ -473,41 +473,6 @@ li {
   width: auto;
   height: 100%;
 }
-.cardInicio .fecha {
-  background: #D9D9D9;
-  color: #292929;
-  font-family: "Nunito Sans";
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 5px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-}
-.cardInicio .cardBody .text {
-  margin-top: 10px;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.cardInicio .cardFooter .btn.openLink{
-  font-family: "Visby";
-  font-weight: 600;
-  font-size: 1.15rem;
-  color: #6D3DE7;
-  display: inline;
-  padding: 5px;
-  transition: all 0.18s;
-}
-.cardInicio .cardFooter {
-  margin-top: 2rem;
-  text-align: end;
-}
-.cardInicio .cardFooter .btn.openLink:hover {
-  background: #F2EDFF;
-}
 
 .blogImagen {
   display: flex;
@@ -670,7 +635,9 @@ li {
   background: #fff;
   padding: 15px;
   height: 100%;
+  width: 100%;
   border-radius: 5px;
+  border: 1px solid white;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -678,7 +645,7 @@ li {
   transition: all 0.3s;
 }
 .eventoCard .imgWrap {
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -712,6 +679,9 @@ li {
   text-transform: uppercase;
   letter-spacing: 0.03em;
   padding: 10px;
+}
+.eventoCard .eventoInfo {
+  text-align: left;
 }
 .eventoCard .eventoInfo p.subtitulo, .eventoCard .eventoInfo p.texto.ubicación {
   margin-bottom: 5px;
@@ -777,6 +747,17 @@ li {
 }
 .modal-body .text {
   text-align: justify;
+}
+.modal-body .fecha {
+  background: #D9D9D9;
+  color: #292929;
+  font-family: "Nunito Sans";
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
 }
 
 footer {
@@ -1586,8 +1567,7 @@ footer .logoWrap img {
     width: 132px;
   }
 }
-.scrollDown 
-.navbar-toggler, .scrolled button.navbar-toggler {
+.scrollDown button.navbar-toggler, .scrolled button.navbar-toggler {
   background: #fff;
 }
 .scrollDown .navbar-collapse .navbar-nav, .scrolled .navbar-collapse .navbar-nav {
