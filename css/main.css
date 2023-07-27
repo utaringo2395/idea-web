@@ -498,9 +498,10 @@ li {
   }
 }
 .blogImagen .imgCont {
-  width: 1000px;
+  width: 40%;
   height: 250px;
   border-radius: 4px;
+  flex-shrink: 0;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -1781,9 +1782,19 @@ footer .logoWrap img {
 nav.galleryNav .container-fluid {
   padding: 15px 25px;
 }
+@media (max-width: 575.98px) {
+  nav.galleryNav .container-fluid {
+    padding: 10px 16px;
+  }
+}
 nav.galleryNav .container-fluid .galleryLogo {
   height: 50px;
   width: auto;
+}
+@media (max-width: 575.98px) {
+  nav.galleryNav .container-fluid .galleryLogo {
+    height: 40px;
+  }
 }
 
 #inicio {
