@@ -243,11 +243,19 @@
         if (eventosPasados.length === 0)
           document.getElementById(
             "divBotonesPas"
-          ).innerHTML = `<img src="../../img/sincontenido.png" alt="sin contenido" style="width: 50% !important;">`;
+          ).innerHTML = `
+            <div class="col-lg-12 text-center my-5">
+                <img src="/img/sincontenido.png" alt="sin contenido" class="img-fluid">
+            </div>
+          `;
         if (eventosProximos.length === 0)
           document.getElementById(
             "divBotones"
-          ).innerHTML = `<img src="../../img/sincontenido.png" alt="sin contenido" style="width: 50% !important;">`;
+          ).innerHTML = `
+            <div class="col-lg-12 text-center my-5">
+                <img src="/img/sincontenido.png" alt="sin contenido" class="img-fluid">
+            </div>
+          `;
 
         const maxEventosPasadosMostrados = 6;
         const ultimosEventosPasados = eventosPasados.slice(
