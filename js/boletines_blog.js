@@ -7,7 +7,7 @@ function consultabol() {
   const url =
   "https://egobierno2.aguascalientes.gob.mx/geaws/api/gea/bol/ws/btportalJSON";
 //const data = { "": "Idea1" };
-const data = { "": "Idea1" };
+const data = { "": "Idea2" };
 //const data = { "": "Idea3" };
 const headers = { "Content-Type": "application/x-www-form-urlencoded" };
 

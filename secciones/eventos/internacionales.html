@@ -1,333 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Eventos Internacionales IDEA - Instituto del Deporte del Estado de
-      Aguascalientes
-    </title>
-    <link rel="icon" href="/img/logoColor.png" type="image/png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Internacionales IDEA - Instituto del Deporte del Estado de Aguascalientes</title>
+    <link rel="icon" href="/img/logoColor.png" type="image/png">
 
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
 
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
     <nav class="navbar navbarRuta navbar-expand-lg fixed-top" ref="headRef">
-      <div class="container">
-        <a class="navbar-brand" href="index.html" ref="headRef">
-          <!-- <img src="/img/logoBlanco.svg" alt="logotipo IDEA" /> -->
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item my-auto">
-              <a class="nav-link active" href="/index.html">Inicio</a>
-            </li>
-            <li class="nav-item my-auto">
-              <a class="nav-link" href="/secciones/deportes.html">Deportes</a>
-            </li>
-            <li class="nav-item my-auto">
-              <a class="nav-link" href="/secciones/adaptados.html"
-                >Deportes Adaptados</a
-              >
-            </li>
-            <li class="nav-item my-auto">
-              <a class="nav-link" href="/secciones/galeria.html">Galería</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Eventos
-              </a>
-              <ul class="dropdown-menu">
-                <li class="my-2">
-                  <a
-                    class="dropdown-item"
-                    href="/secciones/eventos/nacionales.html"
-                    >Nacionales</a
-                  >
-                </li>
-                <li class="my-2">
-                  <a
-                    class="dropdown-item"
-                    href="/secciones/eventos/internacionales.html"
-                    >Internacionales</a
-                  >
-                </li>
-              </ul>
-            </li>
-
-            <li class="nav-item my-auto">
-              <a class="nav-link" href="/secciones/blog.html">Blog</a>
-            </li>
-          </ul>
+        <div class="container">
+            <a class="navbar-brand" href="index.html" ref="headRef">
+                <!-- <img src="/img/logoBlanco.svg" alt="logotipo IDEA" /> -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item my-auto">
+                        <a class="nav-link active" href="/index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="/secciones/deportes.html">Deportes</a>
+                    </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="/secciones/adaptados.html">Deportes Adaptados</a>
+                    </li>
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="/secciones/galeria.html">Galería</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Eventos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="my-2">
+                                <a class="dropdown-item" href="/secciones/eventos/nacionales.html">Nacionales</a>
+                            </li>
+                            <li class="my-2">
+                                <a class="dropdown-item" href="/secciones/eventos/internacionales.html">Internacionales</a>
+                            </li>
+                        </ul>
+                    </li>
+                  
+                    <li class="nav-item my-auto">
+                        <a class="nav-link" href="/secciones/blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <header class="headerBg_5">
-      <div class="imgWrapper">
-        <img src="/img/bgs/eventosNac.jpg" alt="" />
-      </div>
-      <div
-        class="bgGrafico"
-        style="background-image: url('/img/bgFiguras2.png')"
-      ></div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1 class="tituloHeader d-none d-sm-block">
-              Eventos<br />Internacionales
-            </h1>
-            <h1 class="tituloHeader d-sm-none">
-              Eventos<br />Inter-<br />nacionales
-            </h1>
+        <div class="imgWrapper">
+          <img src="/img/bgs/eventosNac.jpg" alt="">
+        </div>
+        <div class="bgGrafico" style="background-image: url('/img/bgFiguras2.png')"></div>
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+               <h1 class="tituloHeader d-none d-sm-block">Eventos<br/>Internacionales</h1>
+               <h1 class="tituloHeader d-sm-none">Eventos<br/>Inter-<br/>nacionales</h1>
+            </div>
           </div>
         </div>
-      </div>
-      <img src="/img/divider/bottomRight.svg" alt="" class="bRightDivider" />
+        <img src="/img/divider/bottomRight.svg" alt="" class="bRightDivider">
     </header>
 
     <main>
       <div class="container mextra">
         <div class="row">
-          <div class="col-lg-12">
-            <ul
-              class="nav nav-pills navEventos mb-3"
-              id="pills-tab"
-              role="tablist"
-            >
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link active titulo"
-                  id="pill-proximos-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#pill-proximos"
-                  type="button"
-                  role="tab"
-                  aria-controls="pill-proximos"
-                  aria-selected="true"
-                >
-                  Próximos
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button
-                  class="nav-link titulo"
-                  id="pill-anteriores-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#pill-anteriores"
-                  type="button"
-                  role="tab"
-                  aria-controls="pill-anteriores"
-                  aria-selected="false"
-                >
-                  Anteriores
-                </button>
-              </li>
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
-              <div
-                class="tab-pane fade show active"
-                id="pill-proximos"
-                role="tabpanel"
-                aria-labelledby="pill-proximos-tab"
-                tabindex="0"
-              >
-                <div class="row">
-                  <div id="divBotones" class="row"></div>
+            <div class="col-lg-12">
+                <ul class="nav nav-pills navEventos mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active titulo" id="pill-proximos-tab" data-bs-toggle="pill" data-bs-target="#pill-proximos" type="button" role="tab" aria-controls="pill-proximos" aria-selected="true">Próximos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link titulo" id="pill-anteriores-tab" data-bs-toggle="pill" data-bs-target="#pill-anteriores" type="button" role="tab" aria-controls="pill-anteriores" aria-selected="false">Anteriores</button>
+                      </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pill-proximos" role="tabpanel" aria-labelledby="pill-proximos-tab" tabindex="0">
+                        <div class="row">
+                            <div id="divBotones" class="row"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pill-anteriores" role="tabpanel" aria-labelledby="pill-anteriores-tab" tabindex="0">
+                        <div class="row">
+                            <div id="divBotonesPas" class="row"></div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="pill-anteriores"
-                role="tabpanel"
-                aria-labelledby="pill-anteriores-tab"
-                tabindex="0"
-              >
-                <div class="row">
-                  <div id="divBotonesPas" class="row"></div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
     </main>
 
     <footer>
-      <div class="logoWrap">
-        <img src="/img/logoFooter.svg" alt="" class="img-fluid" />
-      </div>
-      <p class="texto text-center" style="color: #78797f">
-        Copyright © 2023 IDEA, Gobierno del Estado de Aguascalientes 2022 - 2027
-      </p>
+        <div class="logoWrap">
+            <img src="/img/logoFooter.svg" alt="" class="img-fluid" />
+        </div>
+        <p class="texto text-center" style="color: #78797F;">Copyright © 2023 IDEA, Gobierno del Estado de Aguascalientes 2022 - 2027</p>
     </footer>
 
     <script src="/js/navbar.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
 
     <script>
-      /*IdCategoria:4 -> Deporte nacional
+        /*IdCategoria:4 -> Deporte nacional
           IdCategoria:35 -> Deporte Internacional
         */
-      async function consulta() {
-        document.getElementById("divBotones").innerHTML = "";
-        document.getElementById("divBotonesPas").innerHTML = "";
+        async function consulta() {
+            document.getElementById("divBotones").innerHTML = "";
+            document.getElementById("divBotonesPas").innerHTML = "";
 
-        let fecha_Momento = moment(Date.now())
-          .utc()
-          .format("YYYY-MM-DD hh:mm:ss");
-        const response = await axios.get(
-          "https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/idea"
-        );
+            let fecha_Momento = moment(Date.now()).utc().format("YYYY-MM-DD hh:mm:ss");
+            const response = await axios.get("https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/idea");
 
-        const eventosPasados = [];
-        const eventosProximos = [];
+            const eventosPasados = [];
+            const eventosProximos = [];
 
-        response.data.forEach((element) => {
-          /* Recorremos lista */
-          if (element.idCategoria === 35) {
-            let fin = moment(
-              element.horaios[element.horaios.length - 1].fechaFin
-            )
-              .utc()
-              .format("YYYY-MM-DD hh:mm:ss");
-            if (fecha_Momento >= fin) {
-              eventosPasados.push(element); // Almacenar el evento pasado en el arreglo eventosPasados
-            } else {
-              eventosProximos.push(element); // Almacenar el evento próximo en el arreglo eventosProximos
-            }
-          }
-        });
+            response.data.forEach((element) => {
+                /* Recorremos lista */
+                if (element.idCategoria === 35) {
+                    let fin = moment(element.horaios[element.horaios.length - 1].fechaFin).utc().format("YYYY-MM-DD hh:mm:ss");
+                    if (fecha_Momento >= fin) {
+                        eventosPasados.push(element); // Almacenar el evento pasado en el arreglo eventosPasados
+                    } else {
+                        eventosProximos.push(element); // Almacenar el evento próximo en el arreglo eventosProximos
+                    }
+                }
+            });
 
-        console.log(eventosPasados);
-        console.log(eventosProximos);
-        if (eventosPasados.length === 0)
-          document.getElementById(
-            "divBotonesPas"
-          ).innerHTML = `
-            <div class="col-lg-12 text-center my-5">
-                <img src="/img/sincontenido.png" alt="sin contenido" class="img-fluid">
-            </div>
-          `;
-        if (eventosProximos.length === 0)
-          document.getElementById(
-            "divBotones"
-          ).innerHTML = `
-            <div class="col-lg-12 text-center my-5">
-                <img src="/img/sincontenido.png" alt="sin contenido" class="img-fluid">
-            </div>
-          `;
+            const maxEventosPasadosMostrados = 6;
+            const ultimosEventosPasados = eventosPasados.slice(-maxEventosPasadosMostrados); // Obtener los últimos 5 eventos pasados
 
-        const maxEventosPasadosMostrados = 6;
-        const ultimosEventosPasados = eventosPasados.slice(
-          -maxEventosPasadosMostrados
-        ); // Obtener los últimos 5 eventos pasados
+            // Mostrar los últimos 5 eventos pasados
+            ultimosEventosPasados.forEach((element) => {
+            const fechaInicio = moment(element.horaios[0].fechaInicio).format("MM/DD/YYYY"); // Obtener la fecha de inicio formateada
 
-        // Mostrar los últimos 5 eventos pasados
-        ultimosEventosPasados.forEach((element) => {
-          const fechaInicio = moment(element.horaios[0].fechaInicio).format(
-            "MM/DD/YYYY"
-          ); // Obtener la fecha de inicio formateada
-
-          document.getElementById("divBotonesPas").innerHTML += `
+                document.getElementById("divBotonesPas").innerHTML += `
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <button type="button" class="eventoCard anterior" onclick="window.open('https://eservicios2.aguascalientes.gob.mx/eventosPortal/evento/${
-                          element.id
-                        }', '_blank');">
-                            <div class="imgWrap" style="background-image: url('https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/image/${
-                              element.id
-                            }')">
+                        <button type="button" class="eventoCard anterior" onclick="window.open('https://eservicios2.aguascalientes.gob.mx/eventosPortal/evento/${element.id}', '_blank');">
+                            <div class="imgWrap" style="background-image: url('https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/image/${element.id}')">
                                 <div class="fecha fechaAnt">${fechaInicio}</div> <!-- Agregar la fecha de inicio aquí -->                   
                             </div>
                             <div class="eventoInfo">
-                                <p class="subtitulo c_marino">${element.nombre.slice(
-                                  0,
-                                  70
-                                )}...</p>
-                                <p class="texto ubicacion mb-2">${element.descripcion.slice(
-                                  0,
-                                  150
-                                )}...</p>
+                                <p class="subtitulo c_marino">${element.nombre.slice(0, 70)}...</p>
+                                <p class="texto ubicacion mb-2">${element.descripcion.slice(0, 150)}...</p>
                             </div>
                         </button>
                     </div>
                 `;
-          console.log("Internacional - Pasado", element);
-        });
+                console.log("Internacional - Pasado", element);
+            });
 
-        // Mostrar eventos próximos
-        eventosProximos.forEach((element) => {
-          const fechaInicio = moment(element.horaios[0].fechaInicio).format(
-            "MM/DD/YYYY"
-          ); // Obtener la fecha de inicio formateada
+            // Mostrar eventos próximos
+            eventosProximos.forEach((element) => {
+            const fechaInicio = moment(element.horaios[0].fechaInicio).format("MM/DD/YYYY"); // Obtener la fecha de inicio formateada
 
-          document.getElementById("divBotones").innerHTML += `
+                document.getElementById("divBotones").innerHTML += `
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <button type="button" class="eventoCard" onclick="window.open('https://eservicios2.aguascalientes.gob.mx/eventosPortal/evento/${
-                          element.id
-                        }', '_blank');">
-                            <div class="imgWrap" style="background-image: url('https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/image/${
-                              element.id
-                            }')">
+                        <button type="button" class="eventoCard" onclick="window.open('https://eservicios2.aguascalientes.gob.mx/eventosPortal/evento/${element.id}', '_blank');">
+                            <div class="imgWrap" style="background-image: url('https://egobierno2.aguascalientes.gob.mx/moviles/eventos/api/Eventos/image/${element.id}')">
                                 <div class="fecha">Fecha de inicio: ${fechaInicio}</div> <!-- Agregar la fecha de inicio aquí -->
                             </div>
                             <div class="eventoInfo">
-                                <p class="subtitulo c_marino">${element.nombre.slice(
-                                  0,
-                                  70
-                                )}...</p>
-                                <p class="texto ubicacion mb-2">${element.descripcion.slice(
-                                  0,
-                                  150
-                                )}...</p>
+                                <p class="subtitulo c_marino">${element.nombre.slice(0, 70)}...</p>
+                                <p class="texto ubicacion mb-2">${element.descripcion.slice(0, 150)}...</p>
                             </div>
                         </button>
                     </div>
                 `;
-          console.log("Internacional - Proximo", element);
-        });
-      }
+                console.log("Internacional - Proximo", element);
+            });
+        }
 
-      consulta();
-    </script>
-  </body>
+        consulta();
+
+
+      </script>
+</body>
 </html>
