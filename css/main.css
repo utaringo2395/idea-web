@@ -429,11 +429,13 @@ li {
   text-decoration: none;
   border-radius: 5px;
   display: inline-block;
+  border: 1px solid #270089;
 }
 .btnAzul:hover {
   background: #6D3DE7;
   color: #fff;
   transition: 0.25s ease-out;
+  border: 1px solid #6D3DE7;
 }
 
 .mExtra {
@@ -473,41 +475,6 @@ li {
   width: auto;
   height: 100%;
 }
-.cardInicio .fecha {
-  background: #D9D9D9;
-  color: #292929;
-  font-family: "Nunito Sans";
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 5px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-}
-.cardInicio .cardBody .text {
-  margin-top: 10px;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.cardInicio .cardFooter .btn.openLink{
-  font-family: "Visby";
-  font-weight: 600;
-  font-size: 1.15rem;
-  color: #6D3DE7;
-  display: inline;
-  padding: 5px;
-  transition: all 0.18s;
-}
-.cardInicio .cardFooter {
-  margin-top: 2rem;
-  text-align: end;
-}
-.cardInicio .cardFooter .btn.openLink:hover {
-  background: #F2EDFF;
-}
 
 .blogImagen {
   display: flex;
@@ -531,9 +498,10 @@ li {
   }
 }
 .blogImagen .imgCont {
-  width: 1000px;
+  width: 40%;
   height: 250px;
   border-radius: 4px;
+  flex-shrink: 0;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -670,7 +638,9 @@ li {
   background: #fff;
   padding: 15px;
   height: 100%;
+  width: 100%;
   border-radius: 5px;
+  border: 1px solid white;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -678,7 +648,7 @@ li {
   transition: all 0.3s;
 }
 .eventoCard .imgWrap {
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -713,6 +683,9 @@ li {
   letter-spacing: 0.03em;
   padding: 10px;
 }
+.eventoCard .eventoInfo {
+  text-align: left;
+}
 .eventoCard .eventoInfo p.subtitulo, .eventoCard .eventoInfo p.texto.ubicación {
   margin-bottom: 5px;
   line-height: 1.2;
@@ -736,6 +709,39 @@ li {
   width: 100%;
   height: auto;
   z-index: 150;
+}
+
+.galeriaCard {
+  width: 100%;
+  height: 230px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid transparent;
+}
+.galeriaCard .imgContainer {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 250ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.galeriaCard .imgContainer:hover {
+  transform: scale(1.08);
+}
+.galeriaCard .imgContainer .subtitulo {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 16px;
+  letter-spacing: 0.03em;
 }
 
 .modal-header {
@@ -778,6 +784,22 @@ li {
 .modal-body .text {
   text-align: justify;
 }
+.modal-body .fecha {
+  background: #D9D9D9;
+  color: #292929;
+  font-family: "Nunito Sans";
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.modalGaleria {
+  padding: 0;
+  width: 100%;
+}
 
 footer {
   padding: 50px 10px 30px;
@@ -819,6 +841,11 @@ footer .logoWrap img {
   .swiper-wrapper .swiper-slide {
     justify-content: center;
   }
+}
+
+.swiper-wrapper.wrapper-inicio {
+  height: 100%;
+  margin-bottom: 2.5rem;
 }
 
 .swiper-pagination {
@@ -1474,9 +1501,6 @@ footer .logoWrap img {
   }
 }
 
-.navbarRuta {
-  padding-top: 1.5rem;
-}
 .navbarRuta .navbar-brand {
   padding: 12px;
   background-image: url("/img/logoBlanco.png");
@@ -1586,8 +1610,7 @@ footer .logoWrap img {
     width: 132px;
   }
 }
-.scrollDown 
-.navbar-toggler, .scrolled button.navbar-toggler {
+.scrollDown button.navbar-toggler, .scrolled button.navbar-toggler {
   background: #fff;
 }
 .scrollDown .navbar-collapse .navbar-nav, .scrolled .navbar-collapse .navbar-nav {
@@ -1756,6 +1779,24 @@ footer .logoWrap img {
   color: #270089;
 }
 
+nav.galleryNav .container-fluid {
+  padding: 15px 25px;
+}
+@media (max-width: 575.98px) {
+  nav.galleryNav .container-fluid {
+    padding: 10px 16px;
+  }
+}
+nav.galleryNav .container-fluid .galleryLogo {
+  height: 50px;
+  width: auto;
+}
+@media (max-width: 575.98px) {
+  nav.galleryNav .container-fluid .galleryLogo {
+    height: 40px;
+  }
+}
+
 #inicio {
   position: relative;
   height: 100vh;
@@ -1767,8 +1808,7 @@ footer .logoWrap img {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  z-index: 2;
-  background-image: url("/src/assets/img/bgFiguras.png");
+  background-image: url("/img/bgFiguras.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1812,11 +1852,11 @@ footer .logoWrap img {
   width: 100%;
 }
 #inicio .tituloImg {
-  margin-top: 400px;
+  margin-top: 350px;
 }
 @media (max-width: 575.98px) {
   #inicio .tituloImg {
-    margin-top: 30%;
+    margin-top: 20%;
   }
 }
 

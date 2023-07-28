@@ -18,9 +18,10 @@
     }
 
     .imgCont {
-        width: 1000px;
+        width: 40%;
         height: 250px;
         border-radius: 4px;
+        flex-shrink: 0;
 
         position: relative;
 

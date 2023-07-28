@@ -9,9 +9,8 @@
         overflow: hidden;
         width: 100%;
         height: 100%;
-        z-index: 2;
 
-        background-image: url('/src/assets/img/bgFiguras.png');
+        background-image: url('/img/bgFiguras.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -59,9 +58,9 @@
     }
 
     .tituloImg {
-        margin-top: 400px;
+        margin-top: 350px;
         @media (max-width: 575.98px) {
-            margin-top: 30%;
+            margin-top: 20%;
         }
 
     }

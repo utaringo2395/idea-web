@@ -2,7 +2,9 @@
     background: $c-blanco;
     padding: 15px;
     height: 100%;
+    width: 100%;
     border-radius: 5px;
+    border: 1px solid white;
 
     display: flex;
     flex-direction: column;
@@ -11,7 +13,7 @@
     text-decoration: none;
     transition: all 0.3s;
     .imgWrap {
-        background-position: center;
+        background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
@@ -50,6 +52,7 @@
         }
     }
     .eventoInfo {
+        text-align: left;
         p.subtitulo, p.texto.ubicación {
             margin-bottom: 5px;
             line-height: 1.2;
