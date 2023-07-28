@@ -27,41 +27,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
   
           //Insertamos codigo dinamico en el divBoletines
           document.getElementById("divBoletines").innerHTML += `
-<div class="col-lg-4 col-md-6 mb-4 "> <!-- Agregamos la clase 'swiper-slide' aquí -->
-  <div class="swiper-wrapper">
-
-    <div class="swiper-slide">
-
-          <div class="cardInicio">
-                    
-                            <div class="imgWrapper" >
-                              <img src="${img}" class="card-img-top" alt="">
-                            </div>
-                        
+            <div class="swiper-slide">
+              <div class="cardInicio"> 
+                <div class="imgWrapper" >
+                  <img src="${img}" class="card-img-top" alt="">
+                </div>          
                 <div class="cardBody">
-                      
-                          <h5 class="subtitulo">${element.titulo.slice(0, 45)}...</h5>
-                          <span class="fecha">${moment
-                            .utc(element.fecha)
-                            .format("MM/DD/YYYY")}</span>
-                          <p class="text">${element.nota.slice(0, 120)}...</p>
-                        <div class="cardFooter">
-                  
-                            <button type="button"  class="btn  openLink" onclick="verMas(${
-                              "'" + encodeURIComponent(element.titulo) + "'"
-                            },${"'" + element.fecha + "'"},${"'" + img + "'"},${
-                             "'" + encodeURIComponent(element.nota) + "'"
-                            })">Seguir leyendo &#8594;</button>
-                            </div>
+                  <h5 class="subtitulo">${element.titulo.slice(0, 45)}...</h5>
+                  <span class="fecha">${moment
+                    .utc(element.fecha)
+                    .format("MM/DD/YYYY")}</span>
+                  <p class="text">${element.nota.slice(0, 120)}...</p>
+                  <div class="text-end mt-4">
+                    <button type="button" class="btnAzul" onclick="verMas(${
+                      "'" + encodeURIComponent(element.titulo) + "'"
+                    },${"'" + element.fecha + "'"},${"'" + img + "'"},${
+                      "'" + encodeURIComponent(element.nota) + "'"
+                    })">Seguir leyendo</button>
+                  </div>
                 </div>
-          </div>
-      </div>
-  </div>
-</div>
-      
-          
-                 
-            `;
+              </div>
+            </div>
+          `;
         });
       })
       .catch(function (error) {
