@@ -389,7 +389,7 @@ div.start .card p, .question.card span.question {
 }
 
 .card.question .options > li input:checked + label {
-	background-color: #fff !important;
+	background-color: #270089 !important;
 	color: #fff;
 }
 
