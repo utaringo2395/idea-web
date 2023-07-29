@@ -152,6 +152,26 @@
                 }
             });
 
+            console.log(eventosPasados);
+            console.log(eventosProximos);
+            if (eventosPasados.length === 0)
+            document.getElementById(
+                "divBotonesPas"
+            ).innerHTML = `
+                <div class="col-lg-12 text-center my-5">
+                    <img src="/img/sincontenido.png" alt="sin contenido" class="img-fluid">
+                </div>
+            `;
+            if (eventosProximos.length === 0)
+            document.getElementById(
+                "divBotones"
+            ).innerHTML = `
+                <div class="col-lg-12 text-center my-5">
+                    <img src="/img/sincontenido.png" alt="sin contenido" class="img-fluid">
+                </div>
+            `;
+
+
             const maxEventosPasadosMostrados = 6;
             const ultimosEventosPasados = eventosPasados.slice(-maxEventosPasadosMostrados); // Obtener los últimos 5 eventos pasados
 
