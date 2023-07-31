@@ -1801,6 +1801,15 @@ nav.galleryNav .container-fluid .galleryLogo {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  padding-bottom: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-height: 400.98px) and (max-height: 600px) {
+  #inicio {
+    padding-bottom: 7%;
+  }
 }
 #inicio .bgGrafico {
   position: absolute;
@@ -1852,11 +1861,11 @@ nav.galleryNav .container-fluid .galleryLogo {
   width: 100%;
 }
 #inicio .tituloImg {
-  margin-top: 350px;
+  padding: 7% 12%;
 }
 @media (max-width: 575.98px) {
   #inicio .tituloImg {
-    margin-top: 20%;
+    padding-bottom: 5%;
   }
 }
 
